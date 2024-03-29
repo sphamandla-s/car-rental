@@ -1,0 +1,37 @@
+<header class="w-full min-h-screen pb-10 overflow-hidden from-white to-red-200 bg-gradient-to-br bg-blend-difference">
+    <app-navbar />
+    <section id="home" class="container mx-auto mt-20">
+        <div class="flex items-center justify-between">
+            <div class="max-w-2xl">
+                <h1 class="text-6xl font-semibold uppercase">
+                    <span class="text-yellow-500 ">Easy</span> And Fast <br />
+                    Way to rent your car
+                </h1>
+                <p class="text-gray-600 ">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus
+                    dicta beatae temporibus facilis magnam aperiam eveniet debitis,
+                    nobis expedita facere impedit unde eius, aliquid corrupti! Exercitationem
+                    possimus totam ipsam atque!
+                </p>
+            </div>
+            <img src="/assets/hero-img.png">
+        </div>
+        <div class="flex items-center justify-between">
+            <div class="flex gap-4">
+                <a class="px-5 py-3 text-white bg-yellow-600 cursor-pointer rounded-xl">Get Started</a>
+                <a class="px-5 py-3 text-yellow-600 border border-yellow-600 cursor-pointer rounded-xl ">Learn More</a>
+            </div>
+            <div class="flex items-center justify-between gap-10 px-20 py-10 text-center bg-white rounded-xl">
+                <div>
+                    <p>Pick Up Location</p>
+                    <div class="flex items-center justify-between gap-3 p-3 shadow-md rounded-xl">Current Location <fa-icon [icon]="currentLocation" class="text-red-700" /> </div>
+                </div>
+                <div>
+                    <p>Drop Off Location</p>
+                    
+                    <div class="flex items-center justify-between gap-3 p-3 shadow-md rounded-xl">Drop Off Location <fa-icon [icon]="locationIcon" class="text-yellow-600" /> </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
