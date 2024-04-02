@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git branch: 'main', credentialsId: 'car-rental-secret-github-token', url: 'https://github.com/sphamandla-s/car-rental'
+                git branch: 'main', credentialsId: 'car-rentail-secret-github-token', url: 'https://github.com/sphamandla-s/car-rental'
             }
         }
         stage('Docker Build image') {
@@ -16,10 +16,10 @@ pipeline {
         }
         stage('Push to Docker Hub') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                    sh "docker login -u $USERNAME -p $PASSWORD"
-                    sh "docker push car-rental"  // Replace with your actual image name if different
-                }
+               withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+               sh "docker login -u $USERNAME -p \$PASSWORD"
+               sh "docker push car-rental"
+            }
             }
         }
         stage('Run Docker Container (Optional)') {  // Optional stage to run the container

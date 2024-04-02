@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { Nav_Links } from '../../consents';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faCar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [FontAwesomeModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  navLinks = Nav_Links
+carIcon = faCar
 }

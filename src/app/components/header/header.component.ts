@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../navbar/navbar.component';
-import { faMapLocation } from '@fortawesome/free-solid-svg-icons';
-import { faLocationCrosshairs } from '@fortawesome/free-solid-svg-icons';
+import { NavbarComponent } from '../shared/navbar/navbar.component';
+import { faArrowUp, faCarAlt, faGasPump, faGears, faTachometer } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NavbarComponent,FontAwesomeModule],
+  imports: [NavbarComponent, FontAwesomeModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  locationIcon = faMapLocation
-  currentLocation = faLocationCrosshairs
+  icons = [faGasPump, faTachometer, faGears, faCarAlt]
+arrow = faArrowUp
+
+iconsDesc = ["Flue Type", "Milage", "Transmission", "Model"]
 }
